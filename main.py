@@ -19,7 +19,11 @@ app.add_middleware(
     allow_origins=[
         "http://localhost:3000",
         "http://127.0.0.1:3000",
+        "https://gilded-gaufre-2eadbb.netlify.app/",
         "https://cp-backend-6n14.onrender.com"
+
+
+
     ],  # React dev server
     allow_credentials=True,
     allow_methods=["*"],
