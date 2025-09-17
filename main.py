@@ -120,7 +120,7 @@ async def extract_requirements(file: UploadFile = File(...)):
 
     return {
         "count": len(reqs),
-        "download_url": f"http://localhost:8000/download/{os.path.basename(excel_path)}"
+        "download_url": f"https://cp-backend-6n14.onrender.com/download/{os.path.basename(excel_path)}"
     }
 
 @app.get("/download/{filename}")
