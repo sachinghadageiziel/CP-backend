@@ -14,17 +14,23 @@ from openpyxl.styles import Font, PatternFill, Alignment
 app = FastAPI()
 
 #  Enable CORS for React frontend
+# app.add_middleware(
+#     CORSMiddleware,
+#     allow_origins=[
+#         "http://localhost:3000",
+#         "http://127.0.0.1:3000",
+#         "https://gilded-gaufre-2eadbb.netlify.app/",
+#         "https://cp-backend-6n14.onrender.com"
+#     ],  
+    
+#     allow_credentials=True,
+#     allow_methods=["*"],
+#     allow_headers=["*"],
+# )
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:3000",
-        "http://127.0.0.1:3000",
-        "https://gilded-gaufre-2eadbb.netlify.app/",
-        "https://cp-backend-6n14.onrender.com"
-
-
-
-    ],  # React dev server
+    allow_origins=["*"],  # allow everything
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
